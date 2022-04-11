@@ -2,6 +2,7 @@ import React from 'react'
 
 import Global from '../Global.js'
 import Key from '../Key/Key.js'
+import './Piano.css'
 
 const Piano = () => {
 
@@ -16,6 +17,7 @@ const Piano = () => {
     return(
         <div>{fullpiano}</div>
     )
+
 }
 
 export default Piano;

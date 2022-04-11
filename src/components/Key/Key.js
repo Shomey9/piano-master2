@@ -6,14 +6,17 @@ import './Key.css'
 const Key = ({note}) => {
     let color
     if (note.length > 1) {
-        console.log(`${note}: `, "black")
+        // console.log(`${note}: `, "black")
         color = "black"
     } else {
-        console.log(`${note}: `, "white")
+        // console.log(`${note}: `, "white")
         color = "white"
     }
+    const handleClick = () => {
+        console.log("Pressed Key: ", note)
+    }
     return(
-        <div className={color}>{note}</div>
+        <div className={color} onClick={handleClick}>{note}</div>
     )
 }
 
