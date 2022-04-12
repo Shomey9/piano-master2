@@ -1,14 +1,12 @@
 import React from 'react'
 
 import './App.css'
-import Game from './components/Game/Game.js'
-import Piano from './components/Piano/Piano.js'
+import Checker from './components/Checker/Checker.js'
 
 function App() {
   return (
     <div>
-      <Game />
-      <Piano />
+      <Checker />
     </div>
   );
 }

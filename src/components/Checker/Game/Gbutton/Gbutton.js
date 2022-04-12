@@ -1,27 +1,26 @@
-import {React, useState} from 'react'
+import {React, useEffect, useState} from 'react'
 
 import './Gbutton.css'
 import Rnote from './Rnote/Rnote.js'
-import Checker from './Checker/Checker.js'
 
-const Gbutton = () => {
+const Gbutton = ({sendAnswerUp}) => {
     const [play, setPlay] = useState(true)
+   
+
     const handleClick = () => {
         setPlay(!play)
     }
-    // const dataFromRnote= (rnoteData) => {
-    //     // dataToGame(rnoteData)
-    //     console.log("Data Rnote to Gbutton: ", rnoteData)
-    // }
+
+   
+   
 
     return (
         (play === true ?
-            <button onClick={handleClick}> PLAY</button>
+            <button onClick={handleClick}>PLAY</button>
             :
             <div>
-                <Checker />
                 <Rnote 
-                    // rnoteData={dataFromRnote} 
+                    sendAnswerUp={sendAnswerUp}
                 />
             </div>
              

@@ -4,10 +4,10 @@ import React from 'react'
 import Gbutton from './Gbutton/Gbutton'
 import './Game.css'
 
-const Game = () => {
+const Game = ({sendAnswerUp}) => {
 
     return (
-        <Gbutton />  
+        <Gbutton sendAnswerUp={sendAnswerUp} />  
     )
 }
 

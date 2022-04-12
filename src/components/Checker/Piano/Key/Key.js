@@ -1,10 +1,10 @@
-import {React, useState} from 'react';
+import {React, useEffect, useState} from 'react';
 
 import './Key.css'
 // import Global from '../Global.js'
 
 const Key = ({note}) => {
-    const [pressedNote, setPressedNote] = useState("")
+    // const [pressedNote, setPressedNote] = useState("")
     let color
     if (note.length > 1) {
         // console.log(`${note}: `, "black")
@@ -14,9 +14,12 @@ const Key = ({note}) => {
         color = "white"
     }
     const handleClick = () => {
-        // console.log("Pressed Key: ", note)
-        setPressedNote(note)
+        console.log("Pressed Key: ", note)
+        // setPressedNote(note)
     }
+    // useEffect(()=>{
+        
+    // })
 
     return (
         <div className={color} onClick={handleClick}>{note}</div>
