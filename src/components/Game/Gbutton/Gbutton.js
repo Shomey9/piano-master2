@@ -2,6 +2,7 @@ import {React, useState} from 'react'
 
 import './Gbutton.css'
 import Rnote from './Rnote/Rnote.js'
+import Checker from './Checker/Checker.js'
 
 const Gbutton = () => {
     const [play, setPlay] = useState(true)
@@ -17,10 +18,12 @@ const Gbutton = () => {
         (play === true ?
             <button onClick={handleClick}> PLAY</button>
             :
-            
-            <Rnote 
-            // rnoteData={dataFromRnote} 
-            />
+            <div>
+                <Checker />
+                <Rnote 
+                    // rnoteData={dataFromRnote} 
+                />
+            </div>
              
         )    
     )
