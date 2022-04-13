@@ -1,12 +1,12 @@
 import React from 'react'
 
 import './App.css'
-import Checker from './components/Checker/Checker.js'
+import Game from './components/Game/Game.js'
 
 function App() {
   return (
     <div>
-      <Checker />
+      <Game />
     </div>
   );
 }

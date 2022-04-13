@@ -1,52 +1,61 @@
 import React, { useEffect, useState } from 'react'
 
-import Game from './Game/Game.js'
-import Piano from './Piano/Piano.js'
+import Display from '../Game/Display/Display.js'
+import Key from '../Game/Piano/Key/Key.js'
+import Testanswer from '../Game/Testanswer/Testanswer.js'
 
 const Checker = () => {
     // const [display, setDisplay] = useState("")
-    const [userAnswer, setUserAnswer] = useState("")
-    const [answer, setAnswer] = useState("")
-    
-    
-    // let Answer = "Right or Wrong?"
-    // const handleClick = () => {
-    //     if (userAnswer === Answer) {
-    //         Answer = "Correct"
-    //     } else {
-    //         Answer = "False"
-    //     }
-    // }
+    // const [userAnswer, setUserAnswer] = useState("noanswer")
+    const [answer, setAnswer] = useState("unselected")
+    const [pressed, setPressed] = useState("")
 
+    const handleDataFromPiano = (pressedkey) => {
+        // setUserAnswer(pressedkey)
+        // console.log(pressedkey)
+        // if (pressedkey==="nothing") {
+            // console.log("pressed key: ",userAnswer)
+        // } else {
+            // console.log("pressed key: ",userAnswer)
+        // }
+    }
     const handleDataFromGame = (answer) => {
-        console.log("Answer:" , answer)
+        // console.log("Answer:" , answer)
         setAnswer(answer)
     }
-    const handleDataFromPiano = (useranswer) => {
-        console.log("User Answer: ", useranswer)
-        setUserAnswer(userAnswer)
-    }
 
-    const check = () => {
-        // console.log("hello")
-        if (userAnswer === "unpressed") {
-            console.log("hello")
-            // setDisplay("Empty")
-        } 
+    useEffect(()=>{
+        // console.log(userAnswer)
+        // console.log(answer)
+        // console.log(pressed)
+    },[
+        // userAnswer
+    ])
+    useEffect(()=>{
+
+    })
+    
+
+    // const check = () => {
+    //     console.log("hello")
+        // if (userAnswer === "unpressed") {
+        //     console.log("hello")
+        //     // setDisplay("Empty")
+        // } 
         // else if (userAnswer.includes(answer)===true) {
         //     setDisplay("correct")
         // } else {
         //     setDisplay("incorrect")
         // }   
-    }
+    // }
 
-    if (userAnswer==="C") {
-        console.log("hello")
-    }
+    // if (userAnswer==="C") {
+    //     console.log("hello")
+    // }
 
-    useEffect(()=>{
-        check()
-    },[])
+    // useEffect(()=>{
+    //     check()
+    // },[userAnswer])
 
     
 
@@ -58,6 +67,7 @@ const Checker = () => {
         <div>
             <Game 
                 // sendDisplayDown={""}
+                // userAnswer={userAnswer}
                 sendAnswerUp={handleDataFromGame} 
             />
             <Piano
