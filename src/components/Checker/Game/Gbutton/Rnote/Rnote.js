@@ -11,28 +11,21 @@ const Rnote = ({sendAnswerUp}) => {
     // const handleClick = () => {
     //     setNote(
     //         Global.notes[Math.floor(Math.random() * Global.notes.length)],
-    //     )     
-    //     sendAnswerUp(note)
-    //     // rnoteData(note)      
+    //     )        
     // }
-    // sendAnswerUp(note)
-    // console.log(note)
+    
 
 
     useEffect(()=>{
-    //     // console.log("Current Random Note: ", note)
-        setNote(
-            Global.notes[Math.floor(Math.random() * Global.notes.length)],
-        )   
         sendAnswerUp(note)
-    },[note])
+    },[note, sendAnswerUp])
 
 
 
     return (
         <div 
-        // onClick={handleClick}
-        >{note}</div>
+            // onClick={handleClick}
+            >{note}</div>
     )
 }
 

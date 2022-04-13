@@ -1,13 +1,17 @@
 import React from 'react'
 
-// import Global from '../Global.js'
-import Gbutton from './Gbutton/Gbutton'
 import './Game.css'
+import Display from './Display/Display'
+import Gbutton from './Gbutton/Gbutton'
 
-const Game = ({sendAnswerUp}) => {
+
+const Game = ({sendAnswerUp,sendDisplayDown}) => {
 
     return (
-        <Gbutton sendAnswerUp={sendAnswerUp} />  
+        <div>
+            {/* <Display sendDisplayDown={sendDisplayDown} /> */}
+            <Gbutton sendAnswerUp={sendAnswerUp} />  
+        </div>
     )
 }
 
