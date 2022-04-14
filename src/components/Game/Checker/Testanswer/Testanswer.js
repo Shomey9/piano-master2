@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react'
 
 import './Testanswer.css'
 
-import Global from '../../Global.js'
+import Global from '../../../Global.js'
 
 const Rnote = ({sendAnswerUp, userAnswer}) => {
     const [note, setNote] = useState(
@@ -24,9 +24,11 @@ const Rnote = ({sendAnswerUp, userAnswer}) => {
 
 
     useEffect(()=>{
-        sendAnswerUp(note)
+        // sendAnswerUp(note)
         // checkCorrect()
-    },[note, sendAnswerUp, userAnswer])
+    },[note
+        // , sendAnswerUp, userAnswer
+    ])
 
 
 

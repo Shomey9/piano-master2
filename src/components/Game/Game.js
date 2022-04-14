@@ -2,18 +2,14 @@ import React from 'react'
 
 import './Game.css'
 
-import Display from './Display/Display.js'
-import Testanswer from './Testanswer/Testanswer.js'
-import Piano from './Piano/Piano.js'
+import Checker from './Checker/Checker.js'
 
 
-const Game = ({sendAnswerUp,sendDisplayDown, userAnswer}) => {
+const Game = () => {
 
     return (
         <div>
-            {/* <Display /> */}
-            <Testanswer />
-            <Piano />
+            <Checker />
         </div>
     )
 }

@@ -1,32 +1,27 @@
-// import {React, useEffect, useState} from 'react'
+import React, { useState } from 'react'
 
-// import './Gbutton.css'
-// import Answer from '../Game/Answer/Answer.js'
+import './Gbutton.css'
 
-// const Gbutton = ({sendAnswerUp, userAnswer}) => {
-//     const [play, setPlay] = useState(true)
+const Gbutton = () => {
+    const [play, setPlay] = useState(true)
    
 
-//     const handleClick = () => {
-//         setPlay(!play)
-//     }
+    const handleClick = () => {
+        setPlay(!play)
+    }
 
    
    
 
-//     return (
-//         (play === true ?
-//             <button onClick={handleClick}>PLAY</button>
-//             :
-//             <div>
-//                 <Answer 
-//                     sendAnswerUp={sendAnswerUp}
-//                     userAnswer={userAnswer}
-//                 />
-//             </div>
+    return (
+        (play === true ?
+            <button onClick={handleClick}>PLAY</button>
+            :
+            <div>
+            </div>
              
-//         )    
-//     )
-// }
+        )    
+    )
+}
 
-// export default Gbutton
+export default Gbutton
