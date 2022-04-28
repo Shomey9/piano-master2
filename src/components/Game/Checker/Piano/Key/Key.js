@@ -3,38 +3,42 @@ import {React, useEffect, useState} from 'react';
 import './Key.css'
 // import Global from '../Global.js'
 
-const Piano_Key = ({ note }) => {
-    const [pressedNote, setPressedNote] = useState("nothing")
-    const [color, setColor] = useState(null)
+const PianoKey = ({ note, key_color, 
+    noteFromKey
+}) => {
+    const [pressedNote, setPressedNote] = useState("unpressed")
+    console.log("Press Status: ", `${note} is ${pressedNote}`)
+    const [color, setColor] = useState(key_color)
+    console.log("Color Status: ", `${note} is ${color}`)
+
     const keyPress = () => {
-
-        setPressedNote(note)
-        console.log("pressedNote: ", note)
-
-        setTimeout(()=>{setPressedNote("nothing")}, 1)
+        setPressedNote("pressed")
+        setColor("blue")
+        setTimeout(()=>{
+            setPressedNote("unpressed")
+            setColor(key_color)
+        }, 100)
     }
-    const key_color = () => {
-        if (note.length > 1) {
-            setColor("black")
-        } else {
-            setColor("white")
-        }
-    }
-    
+
     useEffect(()=>{
-        key_color()
-    },[])
-
+        if (pressedNote === "pressed") {
+            noteFromKey(note)
+        }
+    })
     // useEffect(()=>{
-    //     sendUserAnswerUp(pressedNote)
-        
-    // },[pressedNote
-    //     , sendUserAnswerUp
-    // ])
+    //     if (pressedNote === "pressed") {
+    //         handleDataFromKey(note)
+    //     } 
+        // else {
+        //     handleDataFromKey("")
+        // }
+    // },[])
 
+    
+    
     return (
         <div className={color} onClick={keyPress}>{note}</div>
     )
 }
 
-export default Piano_Key
+export default PianoKey

@@ -4,11 +4,13 @@ import './Testanswer.css'
 
 import Global from '../../../Global.js'
 
-const Rnote = ({sendAnswerUp, userAnswer}) => {
+const Rnote = (
+    // {handleDataFromGame}
+    ) => {
     const [note, setNote] = useState(
         Global.notes[Math.floor(Math.random() * Global.notes.length)]
     )
-    const [correct, setCorrect] = useState("")
+    // console.log("Note: ", note)
     // const handleClick = () => {
     //     setNote(
     //         Global.notes[Math.floor(Math.random() * Global.notes.length)],
@@ -22,13 +24,9 @@ const Rnote = ({sendAnswerUp, userAnswer}) => {
     // }
     // console.log("userAnswer in Answer: ", userAnswer)
 
-
     useEffect(()=>{
-        // sendAnswerUp(note)
-        // checkCorrect()
-    },[note
-        // , sendAnswerUp, userAnswer
-    ])
+        // handleDataFromGame(note)
+    },[])
 
 
 
